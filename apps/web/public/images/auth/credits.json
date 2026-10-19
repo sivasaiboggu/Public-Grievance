@@ -1,0 +1,54 @@
+[
+  {
+    "file": "slide-1-road-damage.jpg",
+    "category": "road_damage",
+    "caption": "Potholes and broken roads",
+    "title": "Potholed road outside Kolkata Airport",
+    "photographer": "Slyronit",
+    "profileUrl": "https://commons.wikimedia.org/wiki/User:Slyronit",
+    "sourceUrl": "https://commons.wikimedia.org/wiki/File:Potholed_road_outside_Kolkata_Airport.jpg",
+    "license": "Creative Commons Attribution-ShareAlike 4.0 International (CC BY-SA 4.0)",
+    "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+    "downloadDate": "2026-10-19",
+    "modifications": "Cropped and converted to WebP, AVIF, and JPEG at multi-resolutions for responsive web delivery."
+  },
+  {
+    "file": "slide-2-garbage.jpg",
+    "category": "garbage",
+    "caption": "Garbage that has not been collected",
+    "title": "Building construction-demolition-repair waste being dumped in streets in Bengaluru",
+    "photographer": "Mallikarjunasj",
+    "profileUrl": "https://commons.wikimedia.org/wiki/User:Mallikarjunasj",
+    "sourceUrl": "https://commons.wikimedia.org/wiki/File:Building_construction-demolition-repair_waste_being_dumped_in_streets_in_Bengaluru.jpg",
+    "license": "Creative Commons Attribution-ShareAlike 3.0 Unported (CC BY-SA 3.0)",
+    "licenseUrl": "https://creativecommons.org/licenses/by-sa/3.0",
+    "downloadDate": "2026-10-19",
+    "modifications": "Cropped and converted to WebP, AVIF, and JPEG at multi-resolutions for responsive web delivery."
+  },
+  {
+    "file": "slide-3-waterlogging.jpg",
+    "category": "waterlogging",
+    "caption": "Water standing on the road",
+    "title": "A waterlogged road on a rainy day",
+    "photographer": "Beendy234",
+    "profileUrl": "https://commons.wikimedia.org/wiki/User:Beendy234",
+    "sourceUrl": "https://commons.wikimedia.org/wiki/File:A_waterlogged_road_on_a_rainy_day.jpg",
+    "license": "Creative Commons Attribution-ShareAlike 4.0 International (CC BY-SA 4.0)",
+    "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+    "downloadDate": "2026-10-19",
+    "modifications": "Cropped and converted to WebP, AVIF, and JPEG at multi-resolutions for responsive web delivery."
+  },
+  {
+    "file": "slide-4-manhole.jpg",
+    "category": "manhole",
+    "caption": "Open or broken manholes",
+    "title": "Chengde Road rainwater manhole cover 20190814b",
+    "photographer": "Diamo Laung Bobpuao",
+    "profileUrl": "https://commons.wikimedia.org/wiki/User:Diamo_Laung_Bobpuao",
+    "sourceUrl": "https://commons.wikimedia.org/wiki/File:Chengde_Road_rainwater_manhole_cover_20190814b.jpg",
+    "license": "Creative Commons Attribution-ShareAlike 4.0 International (CC BY-SA 4.0)",
+    "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+    "downloadDate": "2026-10-19",
+    "modifications": "Cropped and converted to WebP, AVIF, and JPEG at multi-resolutions for responsive web delivery."
+  }
+]

@@ -1,0 +1,27 @@
+{
+  "name": "grievancegrid",
+  "version": "0.1.0",
+  "private": true,
+  "packageManager": "pnpm@11.25.0",
+  "engines": {"node": ">=22.13.0"},
+  "scripts": {
+    "web": "pnpm --filter @grievancegrid/web dev",
+    "mobile": "pnpm --filter @grievancegrid/mobile start",
+    "build": "turbo run build",
+    "typecheck": "turbo run typecheck",
+    "lint": "turbo run lint",
+    "test": "turbo run test",
+    "guard": "node scripts/guard.mjs",
+    "e2e:web": "pnpm --filter @grievancegrid/web e2e",
+    "e2e:mobile": "pnpm --filter @grievancegrid/mobile e2e",
+    "verify": "pnpm install --frozen-lockfile && pnpm typecheck && pnpm lint && pnpm test && pnpm build && pnpm guard && pnpm e2e:web && pnpm e2e:mobile"
+  },
+  "devDependencies": {
+    "@eslint/js": "^9.39.2",
+    "dependency-cruiser": "^17.3.6",
+    "eslint": "^9.39.2",
+    "eslint-config-next": "16.4.1",
+    "typescript-eslint": "^8.52.0",
+    "turbo": "^2.8.0"
+  }
+}

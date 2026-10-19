@@ -1,0 +1,40 @@
+name: grievancegrid
+services:
+  db:
+    image: postgis/postgis:17-3.5
+    environment:
+      POSTGRES_DB: grievancegrid
+      POSTGRES_USER: grievancegrid
+      POSTGRES_PASSWORD: ${GG_DB_PASSWORD:?Set GG_DB_PASSWORD in your local .env}
+    ports: ["127.0.0.1:5433:5432"]
+    volumes: ["database:/var/lib/postgresql/data"]
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -U grievancegrid -d grievancegrid"]
+      interval: 5s
+      timeout: 5s
+      retries: 20
+  api:
+    build: ./backend
+    environment:
+      GG_DATABASE_URL: postgresql+psycopg://grievancegrid:${GG_DB_PASSWORD:?Set GG_DB_PASSWORD}@db:5432/grievancegrid
+      GG_CORS_ORIGINS: '["http://localhost:3000"]'
+      GG_LOCAL_STORAGE_PATH: /app/var/evidence
+    ports: ["127.0.0.1:8000:8000"]
+    volumes: ["evidence:/app/var/evidence"]
+    depends_on:
+      db: {condition: service_healthy}
+    healthcheck:
+      test: ["CMD", "python", "-c", "import urllib.request; urllib.request.urlopen('http://localhost:8000/ready',timeout=3)"]
+      interval: 5s
+      timeout: 5s
+      retries: 20
+  web:
+    build:
+      context: .
+      dockerfile: apps/web/Dockerfile
+    ports: ["127.0.0.1:3000:3000"]
+    depends_on:
+      api: {condition: service_healthy}
+volumes:
+  database:
+  evidence:

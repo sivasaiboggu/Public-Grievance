@@ -1,0 +1,15 @@
+{
+  "name": "Public GrievanceGrid",
+  "short_name": "GrievanceGrid",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#f8fafc",
+  "theme_color": "#0047b3",
+  "icons": [
+    {
+      "src": "/icon.svg",
+      "sizes": "any",
+      "type": "image/svg+xml"
+    }
+  ]
+}

@@ -1,0 +1,84 @@
+name: checks
+on:
+  push:
+  pull_request:
+permissions:
+  contents: read
+jobs:
+  workflow:
+    runs-on: ubuntu-latest
+    services:
+      postgres:
+        image: postgis/postgis:17-3.5
+        env:
+          POSTGRES_DB: grievancegrid_test
+          POSTGRES_USER: grievancegrid
+          POSTGRES_PASSWORD: ci-disposable-password
+        ports: ["5432:5432"]
+        options: >-
+          --health-cmd "pg_isready -U grievancegrid -d grievancegrid_test"
+          --health-interval 5s --health-timeout 5s --health-retries 20
+    env:
+      GG_DATABASE_URL: postgresql+psycopg://grievancegrid:ci-disposable-password@localhost:5432/grievancegrid_test
+      GG_TEST_DATABASE_URL: postgresql+psycopg://grievancegrid:ci-disposable-password@localhost:5432/grievancegrid_test
+      GG_LOCAL_STORAGE_PATH: /tmp/grievancegrid-e2e-evidence
+      NEXT_TELEMETRY_DISABLED: "1"
+      CI: "true"
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.13"
+          cache: pip
+          cache-dependency-path: backend/requirements.lock
+      - uses: actions/setup-node@v4
+        with:
+          node-version: "24"
+          cache: npm
+      - name: Install API dependencies
+        working-directory: backend
+        run: |
+          python -m pip install -r requirements.lock
+          python -m pip install --no-deps -e .
+      - name: Check API and migrated PostGIS workflow
+        working-directory: backend
+        run: |
+          ruff check app tests migrations
+          ruff format --check app tests migrations
+          python -m alembic upgrade head
+          python -m pytest -q
+      - name: Install clients
+        run: npm ci
+      - name: Check shared client and both apps
+        run: |
+          npm test
+          npm run typecheck
+          npm run build:web
+      - name: Bundle React Native for Android
+        working-directory: apps/mobile
+        run: |
+          npx expo install --check
+          npx expo export --platform android --output-dir dist/android
+      - name: Install browser
+        run: npx playwright install --with-deps chromium
+      - name: Start test servers
+        run: |
+          cd backend
+          python -m tests.seed_e2e
+          python -m uvicorn app.main:app --host 127.0.0.1 --port 8000 > /tmp/gg-api.log 2>&1 &
+          cd ..
+          npm run start --workspace=@grievancegrid/web > /tmp/gg-web.log 2>&1 &
+          python backend/tests/wait_for_servers.py
+      - name: Test citizen-to-officer browser journey
+        working-directory: apps/web
+        run: npx playwright test
+      - name: Keep failure evidence
+        if: failure()
+        uses: actions/upload-artifact@v4
+        with:
+          name: test-diagnostics
+          path: |
+            apps/web/test-results
+            /tmp/gg-api.log
+            /tmp/gg-web.log
+          retention-days: 7

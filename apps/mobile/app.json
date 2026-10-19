@@ -1,0 +1,29 @@
+{
+  "expo": {
+    "name": "Public GrievanceGrid",
+    "slug": "grievancegrid",
+    "version": "0.1.0",
+    "orientation": "portrait",
+    "userInterfaceStyle": "light",
+    "android": {
+      "package": "com.grievancegrid.app",
+      "softwareKeyboardLayoutMode": "resize"
+    },
+    "plugins": [
+      [
+        "expo-location",
+        {
+          "locationWhenInUsePermission": "Allow Public GrievanceGrid to add the problem's location to a report."
+        }
+      ],
+      [
+        "expo-image-picker",
+        {
+          "photosPermission": "Choose a photograph of the issue.",
+          "cameraPermission": "Allow Public GrievanceGrid to capture before and after photos of civic repairs.",
+          "microphonePermission": false
+        }
+      ]
+    ]
+  }
+}

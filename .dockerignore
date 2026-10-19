@@ -1,0 +1,13 @@
+**/node_modules
+**/.venv
+**/.env
+**/.env.local
+**/.next
+**/.expo
+**/__pycache__
+**/*.egg-info
+**/var
+**/test-results
+.git
+datasets
+checkpoints

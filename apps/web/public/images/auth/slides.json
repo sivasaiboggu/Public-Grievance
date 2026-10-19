@@ -1,0 +1,74 @@
+[
+  {
+    "id": "slide-1",
+    "category": "road_damage",
+    "caption": "Potholes and broken roads",
+    "alt": "Damaged asphalt road with visible potholes under daylight",
+    "focalPoint": {
+      "x": 50,
+      "y": 60
+    },
+    "aspectRatio": "4032 / 3024",
+    "blurDataURL": "data:image/webp;base64,UklGRpgAAABXRUJQVlA4IIwAAABQBQCdASoYABIAPzmQu1gvKaWjqAqp4CcJZwDKAAzx/4TovjuNw94QClILxX3bY5KwJqAA/n4C0N8y5ekdA78uKSwDGx+3qL0A0dflWdOg/PWS2ZTBsvS6zIkCuTAo/uIWyw8jaY0gcMWI4AvqvjO5DcGcsVvdm90ZIB+vlBxHqOn9axqTZzmFCBc4AA==",
+    "defaultSrc": "/images/auth/dist/slide-1-road-damage-1600.webp",
+    "srcset": {
+      "avif": "/images/auth/dist/slide-1-road-damage-1080.avif 1080w, /images/auth/dist/slide-1-road-damage-1600.avif 1600w, /images/auth/dist/slide-1-road-damage-2200.avif 2200w",
+      "webp": "/images/auth/dist/slide-1-road-damage-1080.webp 1080w, /images/auth/dist/slide-1-road-damage-1600.webp 1600w, /images/auth/dist/slide-1-road-damage-2200.webp 2200w",
+      "jpeg": "/images/auth/dist/slide-1-road-damage-1080.jpg 1080w, /images/auth/dist/slide-1-road-damage-1600.jpg 1600w, /images/auth/dist/slide-1-road-damage-2200.jpg 2200w"
+    }
+  },
+  {
+    "id": "slide-2",
+    "category": "garbage",
+    "caption": "Garbage that has not been collected",
+    "alt": "Uncollected construction debris and waste piled along a city street",
+    "focalPoint": {
+      "x": 50,
+      "y": 55
+    },
+    "aspectRatio": "3072 / 4080",
+    "blurDataURL": "data:image/webp;base64,UklGRoIAAABXRUJQVlA4IHYAAAAwBACdASoYACAAPzmCt1SvKCUjMBgMAeAnCWMAAA9wN3m2TK/fNe2UFIgA9DynA8kD9NdEB9aOrVSP2Fgrw2/chk9KBWsiPoLwsdTNdPyFI2IzoeS+tMp2sPLkkN/70CCsVioeXnVY+i66kr1Ag24/Vb7eY4AA",
+    "defaultSrc": "/images/auth/dist/slide-2-garbage-1600.webp",
+    "srcset": {
+      "avif": "/images/auth/dist/slide-2-garbage-1080.avif 1080w, /images/auth/dist/slide-2-garbage-1600.avif 1600w, /images/auth/dist/slide-2-garbage-2200.avif 2200w",
+      "webp": "/images/auth/dist/slide-2-garbage-1080.webp 1080w, /images/auth/dist/slide-2-garbage-1600.webp 1600w, /images/auth/dist/slide-2-garbage-2200.webp 2200w",
+      "jpeg": "/images/auth/dist/slide-2-garbage-1080.jpg 1080w, /images/auth/dist/slide-2-garbage-1600.jpg 1600w, /images/auth/dist/slide-2-garbage-2200.jpg 2200w"
+    }
+  },
+  {
+    "id": "slide-3",
+    "category": "waterlogging",
+    "caption": "Water standing on the road",
+    "alt": "Waterlogged roadway with standing rainwater across the street surface",
+    "focalPoint": {
+      "x": 50,
+      "y": 50
+    },
+    "aspectRatio": "4032 / 3024",
+    "blurDataURL": "data:image/webp;base64,UklGRmQAAABXRUJQVlA4IFgAAAAQBACdASoYABIAPzmOwVevKacjqAqp4CcJZwDNhA87FSkSgBf3+WM5AAD84ViBKHDw5j6xbYxMhf7oOoqoBIc6wkXoi3LTo3cnr4H40oDdkgGVM6gAAAAA",
+    "defaultSrc": "/images/auth/dist/slide-3-waterlogging-1600.webp",
+    "srcset": {
+      "avif": "/images/auth/dist/slide-3-waterlogging-1080.avif 1080w, /images/auth/dist/slide-3-waterlogging-1600.avif 1600w, /images/auth/dist/slide-3-waterlogging-2200.avif 2200w",
+      "webp": "/images/auth/dist/slide-3-waterlogging-1080.webp 1080w, /images/auth/dist/slide-3-waterlogging-1600.webp 1600w, /images/auth/dist/slide-3-waterlogging-2200.webp 2200w",
+      "jpeg": "/images/auth/dist/slide-3-waterlogging-1080.jpg 1080w, /images/auth/dist/slide-3-waterlogging-1600.jpg 1600w, /images/auth/dist/slide-3-waterlogging-2200.jpg 2200w"
+    }
+  },
+  {
+    "id": "slide-4",
+    "category": "manhole",
+    "caption": "Open or broken manholes",
+    "alt": "Rainwater drain and manhole installation set into street pavement",
+    "focalPoint": {
+      "x": 50,
+      "y": 50
+    },
+    "aspectRatio": "3648 / 2432",
+    "blurDataURL": "data:image/webp;base64,UklGRlQAAABXRUJQVlA4IEgAAACwAwCdASoYABAAPzmGuVOvKSWisAgB4CcJZwAARYuBJPPgFbq4AAD4+ur3nyJJF+G8yNQM7fGjRusAtday1wewLKZX0BToQAA=",
+    "defaultSrc": "/images/auth/dist/slide-4-manhole-1600.webp",
+    "srcset": {
+      "avif": "/images/auth/dist/slide-4-manhole-1080.avif 1080w, /images/auth/dist/slide-4-manhole-1600.avif 1600w, /images/auth/dist/slide-4-manhole-2200.avif 2200w",
+      "webp": "/images/auth/dist/slide-4-manhole-1080.webp 1080w, /images/auth/dist/slide-4-manhole-1600.webp 1600w, /images/auth/dist/slide-4-manhole-2200.webp 2200w",
+      "jpeg": "/images/auth/dist/slide-4-manhole-1080.jpg 1080w, /images/auth/dist/slide-4-manhole-1600.jpg 1600w, /images/auth/dist/slide-4-manhole-2200.jpg 2200w"
+    }
+  }
+]
